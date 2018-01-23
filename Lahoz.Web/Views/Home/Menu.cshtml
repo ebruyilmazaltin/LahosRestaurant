@@ -1,0 +1,136 @@
+﻿@model IEnumerable<Lahoz.Core.Product>
+@{
+    ViewData["Title"] = "Menu";
+}
+
+<br />
+<head>
+    <style>
+        th {
+            border-bottom: 2px solid darkred;
+            background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0cvtQ5fO1rEJG_IGoTB7O9f5NLWO1L-PKNKSY8kmGdSG1ika4") fixed;
+            text-transform: uppercase;
+        }
+       
+    </style>
+</head>
+<section id="menu" class="parallax-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8 col-sm-12 text-center">
+                <h1 class="heading">Menü</h1>
+                <hr />
+            </div>
+
+            <table class="table" >
+                
+                    @*@foreach (var item in (IEnumerable<CategoryViewModel>)ViewBag.Categories)
+                    {
+                        <tr>
+                            <th>@item.Name</th>
+                            <th></th>                        
+                            <th></th>
+                        </tr>
+
+                        @foreach (var product in Model)
+                         {
+                            <tr>
+                                <td>
+                                    @product.Title
+                                </td>
+                                <td>
+                                    @product.Detail
+                                </td>
+                                <td>
+                                    @product.Price TL
+                                </td>
+                            </tr>
+                            
+                        }
+                       
+                    }*@
+                @foreach (var item in ViewBag.Categories)
+        {
+            <tr>
+                <th>@item.Name</th>
+                <th></th>
+                <th></th>
+            </tr>
+
+            @foreach (var product in item.Product)
+             {
+                <tr>
+                    <td>
+                        @product.Title
+                    </td>
+                    <td>
+                        @product.Detail
+                    </td>
+                    <td>
+                        @product.Price TL
+                    </td>
+                </tr>
+
+            }
+
+        }
+          </table>
+            
+        </div>
+   </div>
+   
+
+</section>
+
+<!-- menu section -->
+@*<section id="menu" class="parallax-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8 col-sm-12 text-center">
+                <h1 class="heading">Menü</h1>
+                <hr />
+            </div>
+
+            <div class="col-md-12">
+                @foreach (var item in (IEnumerable<CategoryViewModel>)ViewBag.Categories)
+                {
+                    <div class="col-md-6">
+                        <button class="accordion" style="border-bottom:2px solid DarkRed">@item.Name</button>
+
+
+                        <div class="panel">
+
+                            @foreach (var product in Model)
+                {
+                                <div style="border-left:2px solid DarkRed">
+                                    <h4>&nbsp; @product.Title.................... <span>@product.Price TL</span></h4>
+                                    <h5>&nbsp; @product.Detail </h5>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                }
+            </div>
+           
+        </div>
+    </div>
+
+</section>
+
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function () {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        }
+    }
+</script>*@

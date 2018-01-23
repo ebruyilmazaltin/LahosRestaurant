@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+   
+       <title>LAHOZ</title>
+    
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!--
+
+
+    http://www.tooplate.com/view/2076-zentro
+
+    -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/animate.min.css">
+    <link rel="stylesheet" href="~/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/css/nivo-lightbox.css">
+    <link rel="stylesheet" href="~/css/default.css">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/png" href="~/images/Graphicloads-Colorful-Long-Shadow-Restaurant.ico" />
+    <style>
+        button.accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+            button.accordion.active, button.accordion:hover {
+                background-color: #ccc;
+            }
+
+            button.accordion:after {
+                content: '\002B';
+                color: #777;
+                font-weight: bold;
+                float: right;
+                margin-left: 5px;
+                color: darkred;
+            }
+
+            button.accordion.active:after {
+                content: "\2212";
+                color: darkred;
+            }
+
+        div.panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+        .navbar {
+            background-color: #FFCC66;
+            height: 100px;
+        }
+        .navbar-brand {
+            margin-top: 20px;
+           
+            }
+
+        #menu{
+            margin-bottom:0px;
+        }
+       </style>    
+       
+ 
+
+</head>
+<body>
+
+    <!-- preloader section -->
+    <section class="preloader">
+        <div class="sk-spinner sk-spinner-pulse"></div>
+    </section>
+
+    <!-- navigation section -->
+    <section class="navbar navbar-default navbar-fixed-top" role="navigation" >
+        <div class="container">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand" style="color:#A52A2A; font-size:37px">LAHOS</a><br />
+                <a href="#" class="navbar-brand" style="color:#A52A2A; font-size:17px">RESTAURANT</a>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right" >
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index" style="color:black; font-size:14px">ANASAYFA</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Gallery" style="color:black; font-size:14px">GALERİ</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Menu" style="color:black; font-size:14px">MENÜ</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Chef" style="color:black; font-size:14px">ŞEF</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Contact" style="color:black; font-size:14px">HAKKIMIZDA</a></li>
+                    <li><a style="color:#A52A2A;font-size:19px;"><i class="fa fa-phone"><marquee direction="up" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="1" scrolldelay="70" width="200"> 05415610694</marquee> </i></a></li>
+                    
+               </ul>
+                
+            </div>
+        </div>
+    </section>
+
+
+    @RenderBody()
+    <!-- footer section -->
+    <footer class="parallax-section">
+        <div class="container">
+            <div class="row">
+                @*<div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.6s">
+                    <h2 class="heading">İletişim Bilgileri</h2>
+                    <div class="ph">
+                        <p><i class="fa fa-phone"></i> Telefon</p>
+                        <h4>05415610694</h4>
+                    </div>
+                    <div class="address">
+                        <p><i class="fa fa-map-marker"></i>Lokasyon</p>
+                        <h4>Boğaziçi Mahallesi, Güllük</h4>
+                    </div>
+                </div>*@
+                <div class="col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.6s">
+                    <h2 class="heading">Açık Saatler</h2>
+                    <p>Pazartesi-Cuma &nbsp; <span>10:00  - 00:00 </span></p>
+                    <p>Cumartesi-Pazar&nbsp;&nbsp;<span>10:30 - 02:00</span></p>
+                </div>
+                <div class="col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.6s">
+                    <h2 class="heading">Bizi takip edin</h2>
+                    <ul class="social-icon">
+                        <li><a href="https://www.facebook.com/lahosrestorant/" target="_blank" class="fa fa-facebook wow bounceIn" data-wow-delay="0.3s"></a></li>
+                        <li><a href="#" class="fa fa-twitter wow bounceIn" data-wow-delay="0.6s"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <br /><br />
+        <span>Bu projede kullanılan görseller ve bilgiler örnek amaçlıdır.</span>
+    </footer>
+
+
+    
+
+    <!-- JAVASCRIPT JS FILES -->
+    <script src="~/js/jquery.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery.parallax.js"></script>
+    <script src="~/js/smoothscroll.js"></script>
+    <script src="~/js/nivo-lightbox.min.js"></script>
+    <script src="~/js/wow.min.js"></script>
+    <script src="~/js/custom.js"></script>
+
+</body>
+</html>
